@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+       
+#main1{
+    width: 300px;
+    background-color: black;
+    height: 300px;
+text-align: center;
+line-height: 300px;
+border-radius: 50%;
+
+}
+#time{
+color: rgb(195, 5, 5);
+font-size: 50px;
+}
+    </style>
+</head>
+<body id="body">
+    
+    <header>
+        <h1>الساعة الان</h1>
+    </header>
+<main id="main1">
+    <h1 id="time"></h1>
+</main>
+
+
+
+    
+    <script>
+        function apal(){
+            var lyas = new Date();
+            var time = document.getElementById("time");
+            time.innerHTML = lyas.getHours() +":"+lyas.getMinutes()+":"+lyas.getSeconds();
+        }
+    setInterval(apal,100);
+        onload = apal();
+    </script>
+</body>
+</html>
